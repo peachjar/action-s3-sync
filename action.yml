@@ -7,3 +7,27 @@ runs:
 branding:
   icon: refresh-cw
   color: green
+inputs:
+  args:
+    description: Additional args for AWS CLI
+    default: '--acl public-read --follow-symlinks'
+    required: false
+  aws_s3_bucket:
+    description: Bucket to sync
+    required: true
+  aws_access_key_id:
+    description: AWS access key id
+    required: true
+  aws_secret_access_key:
+    description: AWS secret access key id
+    required: true
+  aws_region:
+    description: AWS region
+    default: 'us-east-1'
+    required: false
+  source_dir:
+    description: Local source dir to sync
+    required: true
+  dest_dir:
+    description: Remote S3 dir to sync
+    required: true
